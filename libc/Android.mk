@@ -199,6 +199,13 @@ libc_common_src_files += \
     bionic/__vsnprintf_chk.cpp \
     bionic/__vsprintf_chk.cpp \
 
+# cortex-a9 without neon
+ifneq ($(TARGET_CPU_VARIANT),tegra2)
+    libc_common_src_files += \
+        bionic/memchr.c \
+
+endif
+
 libc_bionic_src_files := \
     bionic/abort.cpp \
     bionic/assert.cpp \
