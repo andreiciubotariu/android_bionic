@@ -372,8 +372,6 @@ libc_upstream_netbsd_src_files := \
 # =========================================================
 ifeq ($(TARGET_ARCH),arm)
 libc_common_src_files += \
-	bionic/memmove.c.arm \
-	string/bcopy.c \
 	string/strncmp.c \
 	string/strncat.c \
 	string/strncpy.c \
