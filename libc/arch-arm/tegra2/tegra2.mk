@@ -10,4 +10,8 @@ $(call libc-add-cpu-variant-src,STRCAT,string/strcat.c)
 # armv7-a (non neon) ones from cm10.1
 $(call libc-add-cpu-variant-src,STRLEN,arch-arm/tegra2/bionic/strlen.S)
 $(call libc-add-cpu-variant-src,MEMCHR,arch-arm/tegra2/bionic/memchr.S)
-
+# cm11 wouldn't compile without these for tegra2
+$(call libc-add-cpu-variant-src,__STRCPY_CHK,bionic/__strcpy_chk.cpp)
+$(call libc-add-cpu-variant-src,__STRCAT_CHK,bionic/__strcat_chk.cpp)
+$(call libc-add-cpu-variant-src,__MEMCPY_CHK,bionic/__memcpy_chk.cpp)
+$(call libc-add-cpu-variant-src,__MEMSET_CHK,bionic/__memset_chk.cpp)
